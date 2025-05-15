@@ -1,0 +1,293 @@
+* {
+  font-family: Inter;
+  margin: 0;
+  font-weight: 500;
+}
+
+.sidebar {
+  position: fixed;
+  top: 65px; /* Ta bort navbarhöjden från toppen */
+  left: 0;
+  height: calc(100vh - 65px); /* Hela höjden minus navbarhöjden */
+  width: 15%;
+  background-color: rgb(241, 196, 231);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1000;
+}
+
+.hamburger.active {
+  color: black;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 60px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  color: black;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 20px;
+}
+
+.sidebar-links a:hover {
+  border-radius: 5px;
+  background-color: rgb(222, 149, 228);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1000px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 10px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar-links {
+    display: none;
+  }
+
+  .sidebar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 658px) {
+  .sidebar-links {
+    display: none;
+  }
+
+  .sidebar-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  padding: 8px;
+  transition: background-color 0.3s ease;
+}
+
+/*DARKMODE BTN*/
+
+body.dark .sidebar {
+  background-color: #9deb9b;
+}
+
+body.dark .sidebar-links a {
+  color: #000000;
+}
+
+body.dark .sidebar-links a:hover {
+  background-color: #76c06f;
+}
+
+.darkmode-button {
+  background: none;
+  border: 2px solid black;
+  border-radius: 10px;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 18px;
+  text-align: left;
+  width: 10rem;
+}
+
+@media (max-width: 1200px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+
+  .darkmode-button {
+    font-size: 18px;
+    text-align: left;
+    width: 10rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+
+  .darkmode-button {
+    font-size: 13px;
+    text-align: left;
+    width: 8rem;
+  }
+}
+
+@media (max-width: 639px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 13px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+
+  .darkmode-button {
+    font-size: 13px;
+    text-align: left;
+    width: 4rem;
+  }
+}
+
+@media (max-width: 415px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 11px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .sidebar {
+    width: 20%;
+    padding: 5px;
+  }
+
+  .darkmode-button {
+    font-size: 11px;
+    text-align: left;
+    width: 4rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .sidebar-links a {
+    text-decoration: none;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+  }
+
+  .sidebar {
+    width: 25%;
+    padding: 5px;
+  }
+
+  .darkmode-button {
+    font-size: 11px;
+    text-align: left;
+    width: 4rem;
+  }
+}
