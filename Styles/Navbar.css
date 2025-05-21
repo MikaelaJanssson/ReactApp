@@ -6,7 +6,7 @@
 
 .root {
   display: flex;
-  height: 100vh; /* Full höjd för att passa allt innehåll utan scrollning */
+  height: 100vh;
   width: 100%;
 }
 
@@ -20,6 +20,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .navbar {
@@ -28,25 +29,30 @@ header {
   justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .nav-links {
   display: flex;
-  gap: 40px;
+  gap: 10px;
+  margin-left: 3%;
 }
 
 .nav-link {
   color: black;
   text-decoration: none;
-  font-family: Inter, sans-serif;
+  font-family: Bangers;
   font-weight: 500;
   margin-top: 10px;
+  margin-right: 40px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  padding: 4px 8px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .nav-link:hover {
@@ -66,26 +72,80 @@ body.dark .navbar {
   color: #ffffff;
 }
 
+body.dark .header {
+  background-color: #9deb9b;
+  color: #ffffff;
+}
 /* Responsiv styling */
-@media (max-width: 400px) {
-  .nav-links {
-    gap: 10px;
-    font-size: 16px;
-    margin-left: 60px;
+
+@media (max-width: 1400px) {
+  .nav-link {
+    font-size: 30px;
   }
 
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: 2%;
+  }
+}
+
+@media (max-width: 1200px) {
   .nav-link {
-    font-size: 16px;
+    font-size: 25px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    margin-left: 7%;
+  }
+}
+
+@media (max-width: 800px) {
+  .nav-link {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 10px;
+    margin-left: 17%;
   }
 }
 
 @media (max-width: 600px) {
-  .nav-links {
-    gap: 10px;
-    font-size: 16px;
-    margin-left: 60px;
+  .nav-link {
+    font-size: 20px;
   }
 
+  .nav-links {
+    margin-left: 32%;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-link {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    gap: 0px;
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 300px) {
   .nav-link {
     font-size: 16px;
   }

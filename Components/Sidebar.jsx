@@ -18,6 +18,14 @@ export default function Sidebar() {
 
   return (
     <article className="sidebar">
+      <div class="droppar">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <button
         className={`hamburger ${menuOpen ? "active" : ""}`}
         onClick={toggleMenu}
@@ -28,7 +36,7 @@ export default function Sidebar() {
         <a href="#uppgift2">Uppgift 2</a>
         <a href="#uppgift3">Uppgift 3</a>
         <button onClick={toggleDarkMode} className="darkmode-button">
-          {darkMode ? "💚  Green Mode" : "❤ Pink Mode"}
+          {darkMode ? "💗 Go to Pink Mode" : "💚 Go to Green Mode"}
         </button>
       </div>
     </article>

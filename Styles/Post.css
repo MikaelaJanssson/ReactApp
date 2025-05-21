@@ -1,0 +1,84 @@
+
+.post {
+  background: linear-gradient(
+    135deg,
+    rgba(241, 196, 231, 0.8),
+    rgba(155, 219, 155, 0.8)
+  ); 
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-effekter för posts */
+.post:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    135deg,
+    rgba(155, 219, 155, 0.8),
+    rgba(241, 196, 231, 0.8)
+  ); /
+}
+
+
+.post::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(241, 196, 231, 0.5),
+    rgba(155, 219, 155, 0.5)
+  );
+  z-index: 0;
+  transition: all 0.4s ease;
+}
+
+.post:hover::before {
+  animation: shine 1s ease-in-out infinite;
+}
+
+
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: -75%;
+  }
+}
+
+
+.post h2 {
+  color: #333;
+  font-size: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  font-family: Bangers;
+}
+
+
+.post a {
+  color: #333;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.post a:hover {
+  background-color: rgba(155, 219, 155, 0.8); 
+  color: white;
+  transform: scale(1.05);
+}

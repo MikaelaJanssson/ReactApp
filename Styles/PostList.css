@@ -1,0 +1,30 @@
+.post-list {
+  flex: 3;
+}
+
+@media (max-width: 1200px) {
+  .post-list {
+    margin-left: 5%;
+  }
+}
+
+@media (max-width: 400px) {
+  .post-list {
+    font-size: 10px;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 500px) {
+  .post-list {
+    font-size: 14px;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 300px) {
+  .post-list {
+    font-size: 14px;
+    margin-left: 10%;
+  }
+}

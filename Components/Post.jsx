@@ -1,0 +1,13 @@
+import React from "react";
+import "../Styles/Post.css";
+
+function Post({ title, body }) {
+  return (
+    <div className="post">
+      <h2>{title}</h2>
+      <p>{body}</p>
+    </div>
+  );
+}
+
+export default Post;

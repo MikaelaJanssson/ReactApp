@@ -1,0 +1,112 @@
+/* Puls-glöd för knappar */
+@keyframes pulseGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+}
+
+/* Skimmer-effekt på knappar */
+@keyframes shine {
+  0% {
+    left: -75%;
+  }
+  100% {
+    left: 125%;
+  }
+}
+
+.tag-button {
+  background: linear-gradient(
+    135deg,
+    rgba(241, 196, 231, 0.8),
+    rgba(155, 219, 155, 0.8)
+  ); /* Rosa till Grönt */
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  height: 3rem;
+  width: 15rem;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: pulseGlow 2.5s infinite;
+  font-family: Bangers;
+}
+
+/* Skimmer-effekt på knappar */
+.tag-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.tag-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(155, 219, 155, 0.8),
+    rgba(241, 196, 231, 0.8)
+  ); /* Grön till Rosa */
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.tag-button:hover::before {
+  animation: shine 1s ease-in-out;
+}
+
+.tag-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.tag-button h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsivitet för knappar */
+@media (max-width: 1000px) {
+  .tag-button {
+    width: 13rem;
+    margin-left: 17%;
+  }
+}
+
+@media (max-width: 800px) {
+  .tag-button {
+    width: 15rem;
+    margin-left: 30%;
+  }
+}
+
+@media (max-width: 600px), (max-width: 400px), (max-width: 344px) {
+  .tag-button {
+    width: 10rem;
+    font-size: 15px;
+    margin-left: 25%;
+  }
+}
+
+@media (max-width: 350px) {
+  .tag-button {
+    font-size: 14px;
+  }
+}
